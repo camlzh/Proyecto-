@@ -43,31 +43,30 @@ class Program
     {
         Console.WriteLine("=== CLASIFICADOR DE RENDIMIENTO DEL JUGADOR ===\n");
 
-        int cantidad = PedirNumero("¿Cuántos jugadores deseas evaluar? ");
-
         List<Jugador> jugadores = new List<Jugador>();
 
-        for (int i = 0; i < cantidad; i++)
+        int cantidadJugadores = PedirNumero("¿Cuántos jugadores desea ingresar? ");
+
+        for (int i = 0; i < cantidadJugadores; i++)
         {
-            Console.WriteLine($"\n--- Jugador {i + 1} ---");
+            Console.WriteLine($"\n--- Jugador #{i + 1} ---");
 
             int asesinatos = PedirNumero("Ingrese el número de asesinatos: ");
             int muertes = PedirNumero("Ingrese el número de muertes: ");
             int asistencias = PedirNumero("Ingrese el número de asistencias: ");
 
-            Jugador jugador = new Jugador(asesinatos, muertes, asistencias);
-            jugadores.Add(jugador);
+            jugadores.Add(new Jugador(asesinatos, muertes, asistencias));
         }
 
-        Console.WriteLine("\n=== RESULTADOS ===");
+        // FASE 9: Ordenar por mejor KDA
+        jugadores.Sort((a, b) => b.CalcularKDA().CompareTo(a.CalcularKDA()));
 
-        int contador = 1;
-        foreach (Jugador jugador in jugadores)
+        Console.WriteLine("\n=== RANKING DE JUGADORES ===");
+
+        for (int i = 0; i < jugadores.Count; i++)
         {
-            Console.WriteLine($"\nJugador {contador}:");
-            Console.WriteLine($"KDA: {jugador.CalcularKDA():F2}");
-            Console.WriteLine($"Clasificación: {jugador.Clasificacion()}");
-            contador++;
+            Console.WriteLine(
+                $"#{i + 1} - KDA: {jugadores[i].CalcularKDA():F2} - {jugadores[i].Clasificacion()}");
         }
     }
 
