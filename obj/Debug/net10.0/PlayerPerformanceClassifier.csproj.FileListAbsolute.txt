@@ -12,3 +12,4 @@ C:\Users\Administrator\PlayerPerformanceClassifier\obj\Debug\net10.0\refint\Play
 C:\Users\Administrator\PlayerPerformanceClassifier\obj\Debug\net10.0\PlayerPerformanceClassifier.pdb
 C:\Users\Administrator\PlayerPerformanceClassifier\obj\Debug\net10.0\PlayerPerformanceClassifier.genruntimeconfig.cache
 C:\Users\Administrator\PlayerPerformanceClassifier\obj\Debug\net10.0\ref\PlayerPerformanceClassifier.dll
+c:\Users\Administrator\PlayerPerformanceClassifier\obj\Debug\net10.0\PlayerPerformanceClassifier.sourcelink.json

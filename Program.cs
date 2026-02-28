@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 class Jugador
 {
@@ -42,15 +43,32 @@ class Program
     {
         Console.WriteLine("=== CLASIFICADOR DE RENDIMIENTO DEL JUGADOR ===\n");
 
-        int asesinatos = PedirNumero("Ingrese el número de asesinatos: ");
-        int muertes = PedirNumero("Ingrese el número de muertes: ");
-        int asistencias = PedirNumero("Ingrese el número de asistencias: ");
+        int cantidad = PedirNumero("¿Cuántos jugadores deseas evaluar? ");
 
-        Jugador jugador = new Jugador(asesinatos, muertes, asistencias);
+        List<Jugador> jugadores = new List<Jugador>();
+
+        for (int i = 0; i < cantidad; i++)
+        {
+            Console.WriteLine($"\n--- Jugador {i + 1} ---");
+
+            int asesinatos = PedirNumero("Ingrese el número de asesinatos: ");
+            int muertes = PedirNumero("Ingrese el número de muertes: ");
+            int asistencias = PedirNumero("Ingrese el número de asistencias: ");
+
+            Jugador jugador = new Jugador(asesinatos, muertes, asistencias);
+            jugadores.Add(jugador);
+        }
 
         Console.WriteLine("\n=== RESULTADOS ===");
-        Console.WriteLine($"KDA calculado: {jugador.CalcularKDA():F2}");
-        Console.WriteLine($"Clasificación: {jugador.Clasificacion()}");
+
+        int contador = 1;
+        foreach (Jugador jugador in jugadores)
+        {
+            Console.WriteLine($"\nJugador {contador}:");
+            Console.WriteLine($"KDA: {jugador.CalcularKDA():F2}");
+            Console.WriteLine($"Clasificación: {jugador.Clasificacion()}");
+            contador++;
+        }
     }
 
     static int PedirNumero(string mensaje)
