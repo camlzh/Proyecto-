@@ -3,12 +3,14 @@ using System.Collections.Generic;
 
 class Jugador
 {
+    public string Nombre { get; set; }
     public int Asesinatos { get; set; }
     public int Muertes { get; set; }
     public int Asistencias { get; set; }
 
-    public Jugador(int asesinatos, int muertes, int asistencias)
+    public Jugador(string nombre, int asesinatos, int muertes, int asistencias)
     {
+        Nombre = nombre;
         Asesinatos = asesinatos;
         Muertes = muertes;
         Asistencias = asistencias;
@@ -51,14 +53,17 @@ class Program
         {
             Console.WriteLine($"\n--- Jugador #{i + 1} ---");
 
+            Console.Write("Ingrese el nombre del jugador: ");
+            string nombre = Console.ReadLine();
+
             int asesinatos = PedirNumero("Ingrese el número de asesinatos: ");
             int muertes = PedirNumero("Ingrese el número de muertes: ");
             int asistencias = PedirNumero("Ingrese el número de asistencias: ");
 
-            jugadores.Add(new Jugador(asesinatos, muertes, asistencias));
+            jugadores.Add(new Jugador(nombre, asesinatos, muertes, asistencias));
         }
 
-        // FASE 9: Ordenar por mejor KDA
+        // Ordenar por mejor KDA
         jugadores.Sort((a, b) => b.CalcularKDA().CompareTo(a.CalcularKDA()));
 
         Console.WriteLine("\n=== RANKING DE JUGADORES ===");
@@ -66,7 +71,7 @@ class Program
         for (int i = 0; i < jugadores.Count; i++)
         {
             Console.WriteLine(
-                $"#{i + 1} - KDA: {jugadores[i].CalcularKDA():F2} - {jugadores[i].Clasificacion()}");
+                $"#{i + 1} - {jugadores[i].Nombre} - KDA: {jugadores[i].CalcularKDA():F2} - {jugadores[i].Clasificacion()}");
         }
     }
 
