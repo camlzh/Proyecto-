@@ -46,12 +46,12 @@ class Program
         Console.WriteLine("=== CLASIFICADOR DE RENDIMIENTO DEL JUGADOR ===\n");
 
         List<Jugador> jugadores = new List<Jugador>();
-
-        int cantidadJugadores = PedirNumero("¿Cuántos jugadores desea ingresar? ");
-
-        for (int i = 0; i < cantidadJugadores; i++)
+        string continuar;
+        
+        //  FASE 8.5 - DO WHILE
+        do
         {
-            Console.WriteLine($"\n--- Jugador #{i + 1} ---");
+            Console.WriteLine("\n--- Nuevo Jugador ---");
 
             Console.Write("Ingrese el nombre del jugador: ");
             string nombre = Console.ReadLine();
@@ -61,9 +61,13 @@ class Program
             int asistencias = PedirNumero("Ingrese el número de asistencias: ");
 
             jugadores.Add(new Jugador(nombre, asesinatos, muertes, asistencias));
-        }
 
-        // Ordenar por mejor KDA
+            Console.Write("\n¿Desea agregar otro jugador? (s/n): ");
+            continuar = Console.ReadLine().ToLower();
+
+        } while (continuar == "s");
+
+        // FASE 9 - ORDENAMIENTO
         jugadores.Sort((a, b) => b.CalcularKDA().CompareTo(a.CalcularKDA()));
 
         Console.WriteLine("\n=== RANKING DE JUGADORES ===");

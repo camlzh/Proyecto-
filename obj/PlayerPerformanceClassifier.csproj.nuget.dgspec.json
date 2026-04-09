@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\PlayerPerformanceClassifier\\PlayerPerformanceClassifier.csproj": {}
+    "C:\\Users\\Administrator\\Proyecto-\\PlayerPerformanceClassifier.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\PlayerPerformanceClassifier\\PlayerPerformanceClassifier.csproj": {
+    "C:\\Users\\Administrator\\Proyecto-\\PlayerPerformanceClassifier.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\PlayerPerformanceClassifier\\PlayerPerformanceClassifier.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Proyecto-\\PlayerPerformanceClassifier.csproj",
         "projectName": "PlayerPerformanceClassifier",
-        "projectPath": "C:\\Users\\Administrator\\PlayerPerformanceClassifier\\PlayerPerformanceClassifier.csproj",
+        "projectPath": "C:\\Users\\Administrator\\Proyecto-\\PlayerPerformanceClassifier.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\PlayerPerformanceClassifier\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\Proyecto-\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config"

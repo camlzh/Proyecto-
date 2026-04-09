@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlayerPerformanceClassifier")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+797e105d3b964ede2a09427b77c353883b2a8f12")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4a384ed42dce9b7abdbc5f8782e8a4802606be8")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlayerPerformanceClassifier")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlayerPerformanceClassifier")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
